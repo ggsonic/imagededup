@@ -1,12 +1,12 @@
 
 import os
-import json
+#import json
 from imagededup.methods import CNN
 
 image_dir='truckc_test'
 
 cnn = CNN()
-#encoding = cnn.encode_image(image_file='26839243_渝BX2875_0_前部.jpg')
+#encoding = cnn.encode_image(image_file='a.jpg')
 #print(encoding,encoding.shape)
 encodings = cnn.encode_images(image_dir=image_dir)
 duplicates = cnn.find_duplicates(encoding_map=encodings)
