@@ -3,7 +3,7 @@ import os
 #import json
 from imagededup.methods import CNN
 
-image_dir='truckc_test'
+image_dir='../aaa'
 
 cnn = CNN()
 #encoding = cnn.encode_image(image_file='a.jpg')
@@ -42,7 +42,7 @@ for item in result:
     dir_name="%d_%d"%(cnt,len(item))
     os.mkdir(dir_name)
     for path in item:
-        os.system('cp "truckc_test/%s" %s/'%(path,dir_name))
+        os.system('cp "%s/%s" %s/'%(image_dir,path,dir_name))
     cnt=cnt+1
 print(result)
 
