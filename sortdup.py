@@ -21,13 +21,15 @@ content=duplicates
 result = list()
 is_exist=False
 def check_add(keys,result):
-    is_exist=False
+    is_exst=False
     for item in result:
         for k in keys:
             if k in item:
-                item.add(k)
-                is_exist=True
-    return is_exist
+                for each_key in keys:
+                    item.add(each_key)
+                is_exst=True
+                return is_exst
+    return is_exst
 
 for k in content:
     v = content[k]
